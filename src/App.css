@@ -30,3 +30,12 @@
 	font-size: 20px;
 	border-color: white;
 }
+
+.rt-tr {
+  padding: 20px 0;
+}
+
+.rt-tbody .rt-tr:hover {
+  background-color: grey;
+  cursor: pointer;
+}

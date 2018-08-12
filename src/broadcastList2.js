@@ -2,6 +2,7 @@ import React from 'react' // eslint-disable-line no-unused-vars
 import ReactTable from 'react-table' // eslint-disable-line no-unused-vars
 import 'react-table/react-table.css'
 import BroadcastRow from './broadcastRow' // eslint-disable-line no-unused-vars
+import { Redirect, withRouter } from 'react-router-dom'
 
 import broadcastMockData from './broadcastMockData'
 import Brand from './brand'
@@ -38,13 +39,21 @@ const columns = [
 ]
 
 
-const BroadcastList = () => (
+const BroadcastList = withRouter(({history}) => (
 	<ReactTable
 		columns={columns}
 		data={broadcastMockData}
-		style={{marginTop: '75px'}} 
+		style={{marginTop: '75px', width: '90%', marginLeft: '5%'}} 
 		headerSylte={{backgroundColor: Brand.ibank}}
+		//className='-striped'
+		getTrProps={(state, rowInfo, column, instance) => {
+			return {
+				onClick: (e, handleOriginal) => {
+					history.push('/broadcast/')
+				}
+			}
+		}}
 	/>
-)
+))
 
 export default BroadcastList
