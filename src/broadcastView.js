@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
 
+import broadcastMockData from './broadcastMockData'
+
+const broadcast = broadcastMockData.pop();
+
 class BroadcastView extends Component {
 	state = {  }
 	render() {
 		return (
 			<div>
-				<li>Broadcast View</li>
+				<div>Back to broadcasts button</div>
+				<h1 style={{textAlign: 'center'}}>{broadcast.batchName}</h1>
 					<ul>
-						<li>Back to broadcasts button</li>
 						<li>Left menu</li>
 						<ul>
 							<li>Broadcast dropdown</li>
