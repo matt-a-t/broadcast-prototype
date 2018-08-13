@@ -19,10 +19,10 @@ class App extends Component {
 					</header>
 					<div id='header-spacing' />
 					<Switch>
-						{/* <Route exact path='/' component={IntroPage} />
-						<Route path='/broadcast' component={BroadcastView} /> */}
-						<Route exact path='/1' component={IntroPage} />
-						<Route path='/' component={BroadcastView} />
+						<Route exact path='/' component={IntroPage} />
+						<Route path='/broadcast' component={BroadcastView} />
+						{/* <Route exact path='/1' component={IntroPage} />
+						<Route path='/' component={BroadcastView} /> */}
 					</Switch>
 				</div>
 			</BrowserRouter>

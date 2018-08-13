@@ -1,8 +1,7 @@
 import React from 'react' // eslint-disable-line no-unused-vars
 import ReactTable from 'react-table' // eslint-disable-line no-unused-vars
 import 'react-table/react-table.css'
-import BroadcastRow from './broadcastRow' // eslint-disable-line no-unused-vars
-import { Redirect, withRouter } from 'react-router-dom'
+import { Redirect, withRouter } from 'react-router-dom' // eslint-disable-line no-unused-vars
 
 import broadcastMockData from './broadcastMockData'
 import Brand from './brand'
@@ -47,11 +46,7 @@ const BroadcastList = withRouter(({history}) => (
 		headerSylte={{backgroundColor: Brand.ibank}}
 		//className='-striped'
 		getTrProps={(state, rowInfo, column, instance) => {
-			return {
-				onClick: (e, handleOriginal) => {
-					history.push('/broadcast/')
-				}
-			}
+			return { onClick: () => { history.push('/broadcast/') }}
 		}}
 	/>
 ))
