@@ -16,16 +16,23 @@ const tabItem = {
 	textAlign: 'center',
 	fontSize: '20px',
 	padding: '20px 0',
-	border: '1px solid white'
+	border: '1px solid white',
+	cursor: 'pointer'
 }
 
-const bcastTabs = () => (
+const tabItemActive = {
+	...tabItem,
+	background: Brand.resmarker
+}
+
+const bcastTabs = (props) => (
 	<div style={tabContainer}>
-		<div style={{...tabItem, background: Brand.resmarker}}>Reports</div>
-		<div style={tabItem}>Schedule</div>
-		<div style={tabItem}>Delivery</div>
-		<div style={tabItem}>Email</div>
-		<div style={tabItem}>Status</div>
+		{/* <div style={{...tabItem, background: Brand.resmarker}}>Reports</div> */}
+		<div style={ props.activeTab === 'reports' ? tabItemActive : tabItem } onClick={() => props.tabClick('reports')}>Reports</div>
+		<div style={ props.activeTab === 'schedule' ? tabItemActive : tabItem } onClick={() => props.tabClick('schedule')}>Schedule</div>
+		<div style={ props.activeTab === 'delivery' ? tabItemActive : tabItem } onClick={() => props.tabClick('delivery')}>Delivery</div>
+		<div style={ props.activeTab === 'email' ? tabItemActive : tabItem } onClick={() => props.tabClick('email')}>Email</div>
+		<div style={ props.activeTab === 'status' ? tabItemActive : tabItem } onClick={() => props.tabClick('status')}>Status</div>
 	</div>
 )
 
