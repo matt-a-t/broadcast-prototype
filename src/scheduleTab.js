@@ -1,30 +1,14 @@
 import React from 'react' //eslint-disable-line no-unused-vars
 
-import { DateRangePicker } from 'react-dates'
-import 'react-dates/lib/css/_datepicker.css'
-import * as moment from 'moment'
+import Brand from './brand'
 
-const inputStyle = {
-	width: '60%',
-	marginLeft: '10%',
-	padding: '15px'
-}
-
-const labelStyle = {
-	display: 'inline-block',
-	width: '30%',
-}
-
-const formGroupStyle = {
-	display: 'block',
-	padding: '10px'
-}
+import { inputStyle, labelStyle, formGroupStyle } from './styles.js'
 
 const scheduleTab = () => (
 	<div style={{width: '90%', marginLeft: '5%', marginTop: '30px'}}>
 		<div style={{width: '50%', display: 'inline-block'}}>
 			<div style={formGroupStyle}>
-				<label for='scheduleFor' style= { labelStyle }>Schedule For:</label>
+				<label for='scheduleFor' style= { labelStyle }>Schedule For</label>
 				<select name='scheduleFor' style={ inputStyle }>
 					<option value='1'>Back Office</option>
 					<option value='2'>Reservation</option>
@@ -36,7 +20,7 @@ const scheduleTab = () => (
 				</select>
 			</div>
 			<div style={formGroupStyle}>
-				<label for='frequency' style= { labelStyle }>Frequency:</label>
+				<label for='frequency' style= { labelStyle }>Frequency</label>
 				<select name='frequency' style= { inputStyle }>
 					<option value='1'>Weekly</option>
 					<option value='2'>Bi-Weekly</option>				
@@ -56,7 +40,7 @@ const scheduleTab = () => (
 		</div>
 		<div style={{width: '50%', display: 'inline-block'}}>
 			<div style={formGroupStyle}>
-				<label for='runReportOn' style={ labelStyle }>Run Report On:</label>
+				<label for='runReportOn' style={ labelStyle }>Run Report On</label>
 				<select name='runReportOn' style={ inputStyle }>
 					<option value='1'>Monday</option>
 					<option value='2'>Tuesday</option>
@@ -68,7 +52,7 @@ const scheduleTab = () => (
 				</select>
 			</div>
 			<div style={formGroupStyle}>
-				<label for='weekStartsOn' style={ labelStyle }>Week Starts On:</label>
+				<label for='weekStartsOn' style={ labelStyle }>Week Starts On</label>
 				<select name='weekStartsOn' style={ inputStyle }>
 					<option value='1'>Monday</option>
 					<option value='2'>Tuesday</option>
@@ -81,22 +65,55 @@ const scheduleTab = () => (
 			</div>
 		</div>
 
-		<DateRangePicker 
-			startDate={moment('8/12/2018')}
-			startDateId='somethingunique'
-			endDate={moment('8/12/2018')}
-			endDateId='somethingunique2'
-			onChange={(startDate, endDate) => console.log(startDate + ', ' + endDate)}
-			focusedInput='something'
-			onFocusChange={focusedInput => console.log(focusedInput)}
-		/>
-		
-		<li>Next report period - date range</li>
-		<li>Next run date: - date</li>
-		<li>Not before: - time (based on time zone in your User settings)</li>
-		<li>Always run this broadcast for date period specified (on the schedule specified above)</li>
-		<li>Run this broadcast ONE TIME for date period specified</li>
-		<li>Run this broadcast for data updated since the last time the broadcast ran (for reservation data only)</li>
+		<div style={{width: '80%', marginLeft:'10%', height: '3px', backgroundColor: Brand.ibank, marginTop: '40px'}} />
+
+		<h2 style={{textAlign: 'center', marginTop: '40px'}}>Next Report Period</h2>
+		<div style={{width: '50%', display: 'inline-block'}}>
+			<div style={formGroupStyle}>
+				<label for='startDate' style={ labelStyle }>Start</label>
+				<input name='startDate' type='date' style={ inputStyle } />
+			</div>
+		</div>
+
+		<div style={{width: '50%', display: 'inline-block'}}>
+			<div style={formGroupStyle}>
+				<label for='endDate' style={ labelStyle }>End</label>
+				<input name='endDate' type='date' style={ inputStyle } />
+			</div>
+		</div>
+
+		<div style={{width: '80%', marginLeft:'10%', height: '3px', backgroundColor: Brand.ibank, marginTop: '40px'}} />
+
+		<h2 style={{textAlign: 'center', marginTop: '40px'}}>Next Run Date</h2>
+		<div style={{width: '50%', display: 'inline-block'}}>
+			<div style={formGroupStyle}>
+				<label for='endDate' style={ labelStyle }>Next Run</label>
+				<input name='endDate' type='date' style={ inputStyle } />
+			</div>
+		</div>
+		<div style={{width: '50%', display: 'inline-block'}}>
+			<div style={formGroupStyle}>
+				<label for='endDate' style={ labelStyle }>Not before</label>
+				<input name='endDate' type='time' style={ inputStyle } />
+			</div>
+		</div>
+
+		<div style={{width: '80%', marginLeft:'10%', height: '3px', backgroundColor: Brand.ibank, marginTop: '40px'}} />
+
+		<div style={{marginTop: '40px'}}>
+			<div style={formGroupStyle}>
+				<input type='checkbox' />
+				<span style={{ marginLeft: '20px'}}>Always run this broadcast for date period specified (on the schedule specified above)</span>
+			</div>
+			<div style={formGroupStyle}>
+				<input type='checkbox' />
+				<span style={{ marginLeft: '20px'}}>Run this broadcast ONE TIME for date period specified</span>
+			</div>
+			<div style={formGroupStyle}>
+				<input type='checkbox' />
+				<span style={{ marginLeft: '20px'}}>Run this broadcast for data updated since the last time the broadcast ran</span>
+			</div>
+		</div>
 	</div>
 )
 

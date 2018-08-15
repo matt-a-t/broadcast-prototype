@@ -99,7 +99,7 @@ class bcastViewHeader extends React.Component {
 			this.setState({showButtons:newValue})
 		}
 		
-		const { match, location, history } = this.props
+		const { history } = this.props
 
 		return (
 			<div style={headerBarStyle}>

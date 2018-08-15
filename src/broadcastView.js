@@ -21,7 +21,7 @@ class BroadcastView extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			activeTab: 'schedule'
+			activeTab: 'reports'
 		}
 		
 		this.tabClick = this.tabClick.bind(this)

@@ -1,7 +1,6 @@
 import React, { Component } from 'react' // eslint-disable-line no-unused-vars
 import './App.css'
 import { BrowserRouter, Route, Switch } from 'react-router-dom' // eslint-disable-line no-unused-vars
-import 'react-dates/initialize'
 
 import Navmenu from './navMenu' // eslint-disable-line no-unused-vars
 import IntroPage from './introPage'
