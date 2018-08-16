@@ -1,6 +1,7 @@
 import React from 'react' //eslint-disable-line no-unused-vars
 
 import { inputStyle, labelStyle, formGroupStyle } from './styles.js'
+import Spacer from './spacer' //eslint-disable-line no-unused-vars
 
 const deliveryTab = () => (
 	<div style={{width: '90%', marginLeft: '5%', marginTop: '30px'}}>
@@ -26,6 +27,9 @@ const deliveryTab = () => (
 				<option>User 3</option>
 			</select>
 		</div>
+
+		<Spacer marginTop='40px' marginBottom='40px' />
+
 		<div style={formGroupStyle}>
 			<label htmlFor='outputTo' style={labelStyle}>Output To</label>
 			<select name='outputTo' style={{...inputStyle, width:'63%', marginLeft: '5%'}}>

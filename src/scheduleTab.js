@@ -1,5 +1,7 @@
 import React from 'react' //eslint-disable-line no-unused-vars
 
+import Spacer from './spacer' //eslint-disable-line no-unused-vars
+
 import Brand from './brand'
 
 import { inputStyle, labelStyle, formGroupStyle } from './styles.js'
@@ -65,7 +67,7 @@ const scheduleTab = () => (
 			</div>
 		</div>
 
-		<div style={{width: '80%', marginLeft:'10%', height: '3px', backgroundColor: Brand.ibank, marginTop: '40px'}} />
+		<Spacer marginTop='40px' />
 
 		<h2 style={{textAlign: 'center', marginTop: '40px'}}>Next Report Period</h2>
 		<div style={{width: '50%', display: 'inline-block'}}>
@@ -82,7 +84,7 @@ const scheduleTab = () => (
 			</div>
 		</div>
 
-		<div style={{width: '80%', marginLeft:'10%', height: '3px', backgroundColor: Brand.ibank, marginTop: '40px'}} />
+		<Spacer marginTop='40px' />
 
 		<h2 style={{textAlign: 'center', marginTop: '40px'}}>Next Run Date</h2>
 		<div style={{width: '50%', display: 'inline-block'}}>
@@ -98,7 +100,7 @@ const scheduleTab = () => (
 			</div>
 		</div>
 
-		<div style={{width: '80%', marginLeft:'10%', height: '3px', backgroundColor: Brand.ibank, marginTop: '40px'}} />
+		<Spacer marginTop='40px' />
 
 		<div style={{marginTop: '40px'}}>
 			<div style={formGroupStyle}>

@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom' // eslint-disabl
 import Navmenu from './navMenu' // eslint-disable-line no-unused-vars
 import IntroPage from './introPage'
 import BroadcastView from './broadcastView'
+import Footer from './footer' // eslint-disable-line no-unused-vars
 
 class App extends Component {
 	render() {
@@ -19,11 +20,14 @@ class App extends Component {
 					</header>
 					<div id='header-spacing' />
 					<Switch>
-						<Route exact path='/' component={IntroPage} />
-						<Route path='/broadcast' component={BroadcastView} />
-						{/* <Route exact path='/1' component={IntroPage} />
-						<Route path='/' component={BroadcastView} /> */}
+						{/* <Route exact path='/' component={IntroPage} />
+						<Route path='/broadcast' component={BroadcastView} /> */}
+						<Route exact path='/1' component={IntroPage} />
+						<Route path='/' component={BroadcastView} />
 					</Switch>
+					
+					<div style={{height: '118px'}} />
+					<Footer />
 				</div>
 			</BrowserRouter>
 		)

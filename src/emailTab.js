@@ -1,6 +1,7 @@
 import React from 'react' //eslint-disable-line no-unused-vars
 
 import { inputStyle, labelStyle, formGroupStyle } from './styles.js'
+import Spacer from './spacer' //eslint-disable-line no-unused-vars
 
 const inputStyle2 = { ...inputStyle, width:'60%', marginLeft: '5%' }
 
@@ -22,6 +23,9 @@ const emailTab = () => (
 			<label htmlFor='subject' style={labelStyle}>Subject (optional):</label>
 			<input name='subject' type='text' style={inputStyle2} />
 		</div>
+
+		<Spacer marginTop='40px' />
+
 		<div style={{marginTop: '40px'}}>
 			<div style={formGroupStyle}>
 				<input type='checkbox' />
@@ -36,6 +40,9 @@ const emailTab = () => (
 				<span style={{ marginLeft: '20px'}}>Display user id of broadcast originator in the email message</span>
 			</div>
 		</div>
+
+		<Spacer marginTop='40px' />
+
 		<div style={{marginTop: '40px'}}>
 			<div style={{width:'50%', display:'inline-block'}}>
 				<div style={formGroupStyle}>
