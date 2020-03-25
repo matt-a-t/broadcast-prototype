@@ -13,17 +13,13 @@ class App extends Component {
 			<BrowserRouter>
 				<div className="App">
 					<header className="App-header">
-						{/* <img src={logo} className="App-logo" alt="logo" /> */}
-						{/* <h1 className="App-title">Welcome to React</h1> */}
 						<img src='https://apps.dev.ciswired.com/tempimages/DEMO_login_logo.jpg' alt="Logo" />
 						<Navmenu />
 					</header>
 					<div id='header-spacing' />
 					<Switch>
-						{/* <Route exact path='/' component={IntroPage} />
-						<Route path='/broadcast' component={BroadcastView} /> */}
-						<Route exact path='/1' component={IntroPage} />
-						<Route path='/' component={BroadcastView} />
+						<Route exact path='/' component={IntroPage} />
+						<Route path='/broadcast' component={BroadcastView} />
 					</Switch>
 					
 					<div style={{height: '118px'}} />
